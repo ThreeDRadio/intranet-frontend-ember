@@ -2,7 +2,7 @@ import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('release', 'Unit | Model | release', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:track']
 });
 
 test('it exists', function(assert) {
@@ -23,7 +23,7 @@ test('has expected attributes', function(assert) {
   assert.ok(attributes.indexOf('year') > -1, 'year property exists');
   assert.ok(attributes.indexOf('genre') > -1, 'genre property exists');
   assert.ok(attributes.indexOf('company') > -1, 'company property exists');
-  assert.ok(attributes.indexOf('country') > -1, 'country property exists');
+  assert.ok(attributes.indexOf('cpa') > -1, 'country property exists');
   assert.ok(attributes.indexOf('arrivaldate') > -1, 'arrivalDate property exists');
   assert.ok(attributes.indexOf('compilation') > -1, 'compilation property exists');
   assert.ok(attributes.indexOf('demo') > -1, 'demo property exists');

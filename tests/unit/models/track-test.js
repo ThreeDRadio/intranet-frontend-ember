@@ -2,7 +2,7 @@ import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('track', 'Unit | Model | track', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:release']
 });
 
 test('it exists', function(assert) {
@@ -17,7 +17,7 @@ test('has expected attributes', function(assert) {
   //XXX Surely there's a way to do this without going to JSON first?
   let attributes = Object.keys(model.toJSON());
 
-  assert.ok(attributes.indexOf('title') > -1, 'title property exists');
-  assert.ok(attributes.indexOf('artist') > -1, 'artist property exists');
-  assert.ok(attributes.indexOf('duration') > -1, 'duration property exists');
+  assert.ok(attributes.indexOf('tracktitle') > -1, 'title property exists');
+  assert.ok(attributes.indexOf('trackartist') > -1, 'artist property exists');
+  assert.ok(attributes.indexOf('tracklength') > -1, 'duration property exists');
 });
