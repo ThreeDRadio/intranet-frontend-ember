@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'frontend',
+    modulePrefix: 'threedradio-intranet-frontend',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
