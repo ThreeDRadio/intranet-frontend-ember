@@ -1,9 +1,9 @@
 <div class="container">
   <h1> Login</h1>
-  {{#if errors.non_field_errors}}
+  {{#if errors.message}}
   <div class="alert alert-danger" role="alert">
     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-    <span class="sr-only">Error:</span> {{errors.non_field_errors}}
+    <span class="sr-only">Error:</span> {{errors.message}}
   </div>
   {{/if}}
     <div class="form-group">

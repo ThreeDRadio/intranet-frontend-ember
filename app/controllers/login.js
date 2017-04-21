@@ -5,14 +5,15 @@ export default Ember.Controller.extend({
 
   actions: {
     authenticate() {
-
       let {username, password } = this.getProperties('username', 'password');
+      this.set('fetching', true);
       this.get('session').authenticate('authenticator:django-rest', {identification:username, password:password}).then(() => {
         this.transitionToRoute('index');
       }).catch((reason) => {
         this.set('errors', reason);
         this.set('username', '');
         this.set('password', '');
+        this.set('fetching', false);
       });
     }
   }
