@@ -42,7 +42,6 @@ export default Ember.Route.extend({
   page: 1,
 
   model(params) {
-    console.log(params);
     this.controllerFor('catalogue.advanced-search').set('artistIn', params.artist);
     this.controllerFor('catalogue.advanced-search').set('titleIn', params.track);
     this.controllerFor('catalogue.advanced-search').set('albumIn', params.release);
