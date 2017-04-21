@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "threedradio-intranet-frontend",
   "dependencies": {
     "bootstrap": "^3.3.6",
     "moment": "^2.13.0",

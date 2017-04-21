@@ -20,7 +20,7 @@
   "author": "Michael Marner <michael.marner@threedradio.com>",
   "license": "MIT",
   "devDependencies": {
-    "broccoli-asset-rev": "^2.5.0",
+    "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^2.4.1",
     "ember-cli": "2.12.1",
     "ember-cli-app-version": "^2.0.0",
