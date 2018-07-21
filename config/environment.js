@@ -1,6 +1,6 @@
 /* eslint-env node */
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   var ENV = {
     modulePrefix: 'threedradio-intranet-frontend',
     environment: environment,
@@ -26,9 +26,9 @@ module.exports = function(environment) {
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
-      ENV['ember-cli-mirage'] = {
-          enabled: false 
-            }
+    ENV['ember-cli-mirage'] = {
+      enabled: false
+    }
     //ENV.APP.LOG_TRANSITIONS = true;
     //ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
@@ -36,9 +36,9 @@ module.exports = function(environment) {
     ENV.APP.API_HOST = 'http://localhost:8000';
     ENV.backendBaseURL = 'http://localhost:8000/logger/';
     ENV['ember-simple-auth'] = {
-        authorizer: 'authorizer:django-rest',
-        serverTokenEndpoint: 'http://localhost:8000/api-token-auth/',
-        crossOriginWhitelist: ['http://localhost:8000']
+      authorizer: 'authorizer:django-rest',
+      serverTokenEndpoint: 'http://localhost:8000/auth/',
+      crossOriginWhitelist: ['http://localhost:8000']
     };
   }
 
