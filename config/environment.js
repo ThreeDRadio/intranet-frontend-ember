@@ -56,6 +56,13 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
 
+    ENV.APP.API_HOST = 'https://intranet.threedradio.com/backend';
+    ENV.backendBaseURL = 'https://intranet.threedradio.com/backend/';
+    ENV.rootURL = '/logger-new/',
+    ENV['ember-simple-auth'] = {
+      authorizer: 'authorizer:django-rest',
+      serverTokenEndpoint: 'https://intranet.threedradio.com/backend/auth/',
+    };
   }
 
   return ENV;
