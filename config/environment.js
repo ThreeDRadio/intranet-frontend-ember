@@ -58,7 +58,7 @@ module.exports = function (environment) {
 
     ENV.APP.API_HOST = 'https://intranet.threedradio.com/backend';
     ENV.backendBaseURL = 'https://intranet.threedradio.com/backend/';
-    ENV.rootURL = '/logger-new/',
+    ENV.rootURL = '/logger/',
     ENV['ember-simple-auth'] = {
       authorizer: 'authorizer:django-rest',
       serverTokenEndpoint: 'https://intranet.threedradio.com/backend/auth/',
