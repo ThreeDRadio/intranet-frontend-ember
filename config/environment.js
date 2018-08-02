@@ -57,7 +57,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
 
     ENV.APP.API_HOST = 'https://intranet.threedradio.com/backend';
-    ENV.backendBaseURL = 'https://intranet.threedradio.com/backend/';
+    ENV.backendBaseURL = 'https://intranet.threedradio.com/backend/logger/';
     ENV.rootURL = '/logger/',
     ENV['ember-simple-auth'] = {
       authorizer: 'authorizer:django-rest',
