@@ -2,23 +2,28 @@
     <div class="panel-body">
         <div class="pull-right">
             <ul class="nav nav-pills">
-                <li role="presentation">{{#link-to "playlists.playlist" playlist}}View Tracks{{/link-to}}</li>
-                {{!--                {{#unless playlist.complete}} --}}
-                <li role="presentation">{{#link-to "playlists.edit" playlist}}Edit Playlist{{/link-to}}</li>
+                <li role="presentation">{{#link-to "playlists.playlist" playlist.id}}View Tracks{{/link-to}}</li>
+                {{!-- {{#unless playlist.complete}} --}}
+                <li role="presentation">{{#link-to "playlists.edit" playlist.id}}Edit Playlist{{/link-to}}</li>
                 {{!-- {{/unless}} --}}
                 <li role="presentation" class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" >
-                    Export<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a target="_blank" href="{{link-backend playlist}}playlists/{{playlist.id}}?format=text" role="button">Artist - Track</a></li>
-                  <li><a target="_blank" href="{{link-backend playlist}}playlists/{{playlist.id}}?format=text&album=true" role="button">Artist - Track, Album</a></li>
-                  <li><a target="_blank" href="{{link-backend playlist}}playlists/{{playlist.id}}?format=csv" role="button">CSV</a></li>
-                </ul>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                        aria-expanded="false">
+                        Export<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a target="_blank" href="{{link-backend playlist}}playlists/{{playlist.id}}?format=text"
+                                role="button">Artist - Track</a></li>
+                        <li><a target="_blank" href="{{link-backend playlist}}playlists/{{playlist.id}}?format=text&album=true"
+                                role="button">Artist - Track, Album</a></li>
+                        <li><a target="_blank" href="{{link-backend playlist}}playlists/{{playlist.id}}?format=csv"
+                                role="button">CSV</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
         {{#if playlist.show }}
-        <h4>{{#link-to "playlists.show" playlist.show}}{{playlist.show.name}}{{/link-to}} <small> {{pretty-date playlist.date}}, hosted by {{playlist.host}}</small></h4>
+        <h4>{{#link-to "playlists.show" playlist.show}}{{playlist.show.name}}{{/link-to}} <small> {{pretty-date
+                playlist.date}}, hosted by {{playlist.host}}</small></h4>
         {{else }}
         <h4>{{playlist.showname}} <small> {{playlist.date}}</small></h4>
         {{/if }}
