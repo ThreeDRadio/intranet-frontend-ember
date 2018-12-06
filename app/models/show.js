@@ -13,6 +13,7 @@ export default Model.extend({
   femaleQuota: attr('number'),
   localQuota: attr('number'),
   australianQuota: attr('number'),
+  active: attr('boolean'),
   playlists: hasMany('playlist'),
   topartists: hasMany('topArtist'),
   statistics: hasMany('statistic')

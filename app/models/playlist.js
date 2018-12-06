@@ -16,6 +16,9 @@ export default Model.extend({
   femaleQuota: attr('number'),
   localQuota: attr('number'),
   australianQuota: attr('number'),
+  fillin: attr('boolean', {
+    defaultValue: false
+  }),
   tracks: hasMany('playlistentry', {
     inverse: 'playlist'
   })
