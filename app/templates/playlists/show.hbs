@@ -1,6 +1,10 @@
 <div class="container">
 
     <h1>{{model.name}}</h1>
+    {{#if model.customQuotas}}
+    <p><strong>Custom Quotas: </strong> {{ model.localQuota }}% Local, {{ model.australianQuota }}% Australian, {{
+        model.femaleQuota}}% Female</p>
+    {{/if}}
 
     <div class="row">
 
@@ -14,12 +18,18 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>#</th><th>Artist</th><th>Plays</th>
+                                <th>#</th>
+                                <th>Artist</th>
+                                <th>Plays</th>
                             </tr>
                         </thead>
                         <tbody>
                             {{#each model.topartists as |artist index| }}
-                            <tr><td>{{one-index index}}</td><td>{{ artist.artist }}</td><td>{{ artist.plays }}</td></tr>
+                            <tr>
+                                <td>{{one-index index}}</td>
+                                <td>{{ artist.artist }}</td>
+                                <td>{{ artist.plays }}</td>
+                            </tr>
                             {{/each}}
                         </tbody>
                     </table>
@@ -32,7 +42,7 @@
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Statistics 
+                    Statistics
                 </div>
                 <div class="panel-body">
                     {{bar-graph data=model.statistics}}
@@ -44,7 +54,7 @@
     </div>
     {{#each model.playlists as |playlist|}}
 
-        {{playlist-summary playlist=playlist }}
+    {{playlist-summary playlist=playlist }}
 
     {{/each}}
 
